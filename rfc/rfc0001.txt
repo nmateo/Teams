@@ -1,0 +1,169 @@
+Independent Submission                                         M. Nouvel
+Category: Informational                                       R. Balbous
+                                                                V. Simon
+                                                                my_teams
+                                                                May 2020
+
+
+                  The my_teams communication protocol
+
+Abstract
+
+   This document describes the my_teams communication protocol.
+   My_teams is an EPITECH project.
+
+Status of This Memo
+
+   This document is not an Internet Standards Track specification; it is
+   published for informational purposes.
+
+Table of Contents
+
+   1. Introduction ................................................... 1
+   2. Communication codes............................................. 2
+      2.1. Basics codes .............................................. 2
+      2.2. Messages codes ............................................ 2
+      2.3. Channels codes ............................................ 2
+      2.4. Teams codes ............................................... 2
+      2.5. Threads codes ............................................. 3
+      2.6. Error codes ............................................... 3
+   3. Security considerations ........................................ 3
+   4. Authors' Addresses ............................................. 3
+
+
+1.  Introduction
+
+   This document describes the my_teams communication protocol.
+   It explain and gives the values of codes which are uses to
+   communicate between server and client.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Nouvel & Balbous & Simon      Informational                     [Page 1]
+
+RFC 0001           The my_teams communication protocol          May 2020
+
+
+2.  Communication codes
+
+   The server of the my_teams uses basics codes to communicate with the
+   client.  The lenght of the codes are statics and equals to 3.  The
+   codes are define in the file cli.h.
+
+2.1.  Basics codes
+
+   Basics codes are codes used for commons communications like
+   connection between server and client.
+
+      707   CONNECTED
+      200   EVENT_LOGGEDIN
+      210   EVENT_LOGGEDOUT
+
+      270   PRINT_USERS
+      390   PRINT_USER
+
+2.2.  Messages codes
+
+   Messages codes are codes links to commands used for manipulating or
+   sending messages between one or more users
+
+      220   EVENT_PRIV_MSG
+      320   PRINT_CONV
+
+2.3.  Channels codes
+
+   Channels codes are codes links to commands used for manipulating
+   channels.
+
+      250   EVENT_CHANNEL_CREATED
+      290   PRINT_CHANNELS
+      410   PRINT_CHANNEL
+      440   CHANNEL_CREATED
+
+2.4.  Teams codes
+
+   Teams codes are codes links to commands used for manipulating
+   and subscribing to a team.
+
+      240   EVENT_TEAM_CREATED
+      280   PRINT_TEAMS
+      400   PRINT_TEAM
+      430   TEAM_CREATED
+
+      470   PRINT_SUB
+      480   PRINT_UNSUB
+
+
+
+
+Nouvel & Balbous & Simon      Informational                     [Page 2]
+
+RFC 0001           The my_teams communication protocol          May 2020
+
+
+2.5.  Threads codes
+
+   Threads codes are codes links to commands used for manipulating
+   threads.
+
+      260   EVENT_THREAD_CREATED
+      300   PRINT_THREADS
+      420   PRINT_THREAD
+      450   THREAD_CREATED
+
+      230   EVENT_THREAD_MSG
+      460   REPLY_CREATED
+      310   PRINT_REPLIES
+
+2.6.  Error codes
+
+   Errors codes are codes links to errors like unknown commands or
+   unknown data.
+
+      Unknown data :
+
+         330   UNKNOWN_CHANNEL
+         340   UNKNOWN_THREAD
+         350   UNKNOWN_CHANNEL
+         360   UNKNOWN_USER
+
+      Wrong command or error on data :
+
+         370   ERROR_UNAUTHORIZED
+         380   ALREADY_EXIST
+
+3.   Security Considerations
+
+   This document has no security considerations.
+
+3.   Authors's Addresses
+
+   Mateo Nouvel
+   mateo.nouvel@epitech.eu
+
+   Remi Balbous
+   remi.balbous@epitech.eu
+
+   Victor Simon
+   victor.simon@epitech.eu
+
+
+
+
+
+
+
+Nouvel & Balbous & Simon      Informational                     [Page 3]
